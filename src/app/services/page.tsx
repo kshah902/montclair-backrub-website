@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Services",
   description:
-    "Explore our massage therapy services: Table Massage, Reflexology, and Chair Massage. Flexible sessions from 10 minutes to 2 hours with package savings.",
+    "Explore our services: Table Massage, Reiki, Reflexology, and Chair Massage. Flexible sessions from 10 minutes to 2 hours with package savings.",
   path: "/services",
 });
 
@@ -25,12 +25,12 @@ export default function ServicesPage() {
           />
         </AnimatedSection>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3 md:gap-12">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 md:gap-10">
           {services.map((service, i) => (
             <AnimatedSection
               key={service.slug}
               delay={i * 150}
-              className={i === 1 ? "md:translate-y-8" : ""}
+              className={i % 2 === 1 ? "md:translate-y-8" : ""}
             >
               <ServiceCard service={service} />
             </AnimatedSection>

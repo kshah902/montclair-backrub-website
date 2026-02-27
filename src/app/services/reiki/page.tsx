@@ -9,16 +9,16 @@ import PackageTable from "@/components/services/PackageTable";
 import { getServiceBySlug } from "@/data/services";
 import { createMetadata } from "@/lib/metadata";
 
-const service = getServiceBySlug("table-massage");
+const service = getServiceBySlug("reiki");
 
 export const metadata: Metadata = createMetadata({
-  title: "Table Massage",
+  title: "Reiki",
   description:
-    "Full-body therapeutic table massage in Montclair, NJ. Can be combined with Reiki. Sessions from 30 minutes to 2 hours. Save up to 33% with packages.",
-  path: "/services/table-massage",
+    "Reiki energy healing in Montclair, NJ. Japanese healing technique for relaxation and stress reduction. Sessions from 30 minutes to 2 hours. Can be combined with table massage.",
+  path: "/services/reiki",
 });
 
-export default function TableMassagePage() {
+export default function ReikiPage() {
   if (!service) return notFound();
 
   return (
@@ -26,7 +26,7 @@ export default function TableMassagePage() {
       <Container>
         {/* Hero */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <AnimatedSection>
+          <AnimatedSection className="lg:order-2">
             <div className="relative aspect-[3/4] overflow-hidden rounded-[40px] rounded-t-full lg:aspect-auto lg:h-full">
               <Image
                 src={service.image}
@@ -39,12 +39,12 @@ export default function TableMassagePage() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={200}>
+          <AnimatedSection delay={200} className="lg:order-1">
             <div className="flex h-full flex-col justify-center">
               <div className="mb-4 flex items-center gap-3">
                 <span className="h-px w-8 bg-primary" />
                 <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-                  Our Signature Service
+                  Energy Healing
                 </span>
               </div>
               <h1 className="font-heading text-4xl font-bold md:text-5xl lg:text-6xl">

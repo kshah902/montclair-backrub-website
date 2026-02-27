@@ -15,16 +15,16 @@ export default function ServicesPreview() {
           <SectionHeading
             title="Our Services"
             italicWord="Services"
-            subtitle="Three distinct approaches to wellness, each tailored to your needs"
+            subtitle="Four distinct approaches to wellness, each tailored to your needs"
           />
         </AnimatedSection>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3 md:gap-12">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 md:gap-10">
           {services.map((service, i) => (
             <AnimatedSection
               key={service.slug}
               delay={i * 150}
-              className={i === 1 ? "md:translate-y-12" : ""}
+              className={i % 2 === 1 ? "md:translate-y-12" : ""}
             >
               <Link
                 href={`/services/${service.slug}`}

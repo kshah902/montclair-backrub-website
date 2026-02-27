@@ -1,4 +1,4 @@
-export type ServiceCategory = "table-massage" | "reflexology" | "chair-massage";
+export type ServiceCategory = "table-massage" | "reiki" | "reflexology" | "chair-massage";
 
 export interface Duration {
   label: string;
