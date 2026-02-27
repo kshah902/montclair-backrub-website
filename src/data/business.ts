@@ -2,7 +2,7 @@ import { BusinessInfo } from "@/types/services";
 
 export const business: BusinessInfo = {
   name: "Montclair Backrub, Massage & Bodyrub",
-  phones: ["(973) 655-8960", "(973) 851-8187"],
+  phones: ["+1 (973) 851-8187"],
   homeVisitSurcharge: 60,
   homeVisitRadius: "15 minutes",
   salesTaxRate: 0.06625,
