@@ -37,7 +37,6 @@ export interface BusinessInfo {
   homeVisitSurcharge: number;
   homeVisitRadius: string;
   salesTaxRate: number;
-  email: string;
 }
 
 export interface Testimonial {

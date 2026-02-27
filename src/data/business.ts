@@ -6,7 +6,6 @@ export const business: BusinessInfo = {
   homeVisitSurcharge: 60,
   homeVisitRadius: "15 minutes",
   salesTaxRate: 0.06625,
-  email: "info@montclairbackrub.com",
 };
 
 export const NAV_LINKS = [
