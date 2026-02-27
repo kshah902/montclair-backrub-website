@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors - Botanical / Organic Serif */
+  --color-background: #F9F8F4;
+  --color-foreground: #2D3A31;
+  --color-primary: #8C9A84;
+  --color-primary-light: #A8B5A0;
+  --color-primary-dark: #6B7D63;
+  --color-secondary: #DCCFC2;
+  --color-secondary-light: #E8DDD3;
+  --color-secondary-dark: #C4B5A5;
+  --color-border: #E6E2DA;
+  --color-interactive: #C27B66;
+  --color-interactive-hover: #A8654F;
+  --color-interactive-light: #D4998A;
+  --color-card: #FFFFFF;
+  --color-card-alt: #F2F0EB;
+  --color-muted: #6B7B6F;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Fonts */
+  --font-heading: var(--font-playfair-display);
+  --font-body: var(--font-source-sans-3);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 6px -1px rgba(45, 58, 49, 0.05);
+  --shadow-medium: 0 10px 15px -3px rgba(45, 58, 49, 0.05);
+  --shadow-large: 0 20px 40px -10px rgba(45, 58, 49, 0.05);
+  --shadow-xl: 0 25px 50px -12px rgba(45, 58, 49, 0.15);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Paper grain texture overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(140, 154, 132, 0.3);
+  color: var(--color-foreground);
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
