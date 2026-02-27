@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { business } from "@/data/business";
 
 export default function CTABanner() {
   return (
@@ -12,20 +13,19 @@ export default function CTABanner() {
               Ready to <em className="italic text-primary-light">relax</em>?
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-lg text-white/70">
-              Book your appointment today and experience the difference
-              professional massage therapy can make.
+              Purchase a package online or give us a call to get started.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href="/booking" variant="secondary" size="lg">
-                Book an Appointment
+              <Button href="/packages" variant="secondary" size="lg">
+                Purchase a Package
               </Button>
               <Button
-                href="/packages"
+                href={`tel:${business.phones[0].replace(/\D/g, "")}`}
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:border-white hover:text-white"
               >
-                View Packages
+                Call {business.phones[0]}
               </Button>
             </div>
           </div>

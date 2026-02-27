@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { NAV_LINKS } from "@/data/business";
+import { NAV_LINKS, business } from "@/data/business";
 import Button from "@/components/ui/Button";
 
 export default function Header() {
@@ -66,8 +66,8 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button href="/booking" size="sm">
-            Book Now
+          <Button href={`tel:${business.phones[0].replace(/\D/g, "")}`} size="sm">
+            Call Now
           </Button>
         </nav>
 
@@ -120,8 +120,8 @@ export default function Header() {
             )}
             style={{ transitionDelay: isOpen ? `${NAV_LINKS.length * 75}ms` : "0ms" }}
           >
-            <Button href="/booking" size="lg">
-              Book Now
+            <Button href={`tel:${business.phones[0].replace(/\D/g, "")}`} size="lg">
+              Call Now
             </Button>
           </div>
         </nav>

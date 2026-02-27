@@ -72,8 +72,8 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="mt-8">
-                <Button href="/booking" size="lg">
-                  Book a Session
+                <Button href="/packages" size="lg">
+                  View Packages
                 </Button>
               </div>
             </div>

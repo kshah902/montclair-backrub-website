@@ -11,7 +11,6 @@ export const business: BusinessInfo = {
 
 export const NAV_LINKS = [
   { label: "Services", href: "/services" },
-  { label: "Booking", href: "/booking" },
   { label: "Packages", href: "/packages" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

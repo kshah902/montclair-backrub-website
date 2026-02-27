@@ -63,12 +63,11 @@ function PackagesContent() {
                 <span className="font-semibold text-foreground">{orderId}</span>
               </p>
               <p className="mt-2 text-muted">
-                You can now book your sessions. Call us or use our online booking
-                to schedule your appointments.
+                Call us at {business.phones[0]} to schedule your sessions.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button href="/booking" size="lg">
-                  Book Your First Session
+                <Button href={`tel:${business.phones[0].replace(/\D/g, "")}`} size="lg">
+                  Call to Schedule
                 </Button>
                 <Button href="/" variant="outline" size="lg">
                   Back to Home

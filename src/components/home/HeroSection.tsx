@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { business } from "@/data/business";
 
 export default function HeroSection() {
   return (
@@ -35,11 +36,11 @@ export default function HeroSection() {
               flexible packages and savings.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button href="/booking" size="lg">
-                Book an Appointment
+              <Button href="/packages" size="lg">
+                Purchase a Package
               </Button>
-              <Button href="/services" variant="outline" size="lg" className="border-white/30 text-white hover:border-white hover:text-white">
-                View Services
+              <Button href={`tel:${business.phones[0].replace(/\D/g, "")}`} variant="outline" size="lg" className="border-white/30 text-white hover:border-white hover:text-white">
+                Call {business.phones[0]}
               </Button>
             </div>
           </div>

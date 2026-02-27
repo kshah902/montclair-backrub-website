@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { business } from "@/data/business";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PackageTable from "@/components/services/PackageTable";
 import { getServiceBySlug } from "@/data/services";
@@ -64,8 +65,8 @@ export default function TableMassagePage() {
                 ))}
               </ul>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button href="/booking" size="lg">
-                  Book a Session
+                <Button href={`tel:${business.phones[0].replace(/\D/g, "")}`} size="lg">
+                  Call to Schedule
                 </Button>
                 <Button href="#packages" variant="outline" size="lg">
                   View Packages

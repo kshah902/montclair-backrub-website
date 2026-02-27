@@ -52,8 +52,8 @@ export default function FAQPage() {
             </p>
             <div className="mt-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/contact">Contact Us</Button>
-              <Button href="/booking" variant="outline">
-                Book a Session
+              <Button href="/packages" variant="outline">
+                View Packages
               </Button>
             </div>
           </div>
